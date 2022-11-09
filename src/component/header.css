@@ -1,0 +1,36 @@
+.website-logo{
+    max-height: 80px;
+    max-width: 80px;
+}
+
+.shopping-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+
+    width: 100px;
+
+}
+
+.shopping-cart-img{  
+    height: 40px;
+    width: 40px;
+}
+
+.header{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    border: 1px black solid;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+}
+
+.nameAndLogo{
+    display: flex;
+    border: 1pk magenta solid;
+    justify-content: space-around;
+}

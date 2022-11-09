@@ -1,0 +1,14 @@
+.cart {
+    max-height: 20px;
+    max-width: 20px;
+}
+
+.tshirt-img{
+    height: 150px;
+    width: 140px;
+}
+
+.priceAndCart{
+    display: flex;
+    justify-content: space-around;
+}
