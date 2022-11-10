@@ -3,6 +3,7 @@ import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const loginUser = createAsyncThunk(
+
   'user/login', async (payload, {rejectWithValue}) => {
     try{
       const { data } = await axios.post("https://motion.propulsion-home.ch/backend/api/auth/token/", payload)

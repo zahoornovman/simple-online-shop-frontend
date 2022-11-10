@@ -1,4 +1,4 @@
-.shopping-cart-modal{
+.shopping-cart-modal, .login-modal{
     position: fixed;
     left: 0;
     top: 0;

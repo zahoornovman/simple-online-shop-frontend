@@ -7,13 +7,13 @@ import { Tshirt } from "../component/Tshirt";
 export function Home(){
 
     const merchandise = useSelector(selectMerchandise);
-    console.log(merchandise);
+    //console.log(merchandise);
 
     return (
 
         <div className="tshirt-display">
         {merchandise.map(
-            (tshirt)=> <Tshirt key={tshirt.div} tshirt={tshirt}/>)}
+            (tshirt)=> <Tshirt key={tshirt.id} tshirt={tshirt}/>)}
         </div>
     )
 }

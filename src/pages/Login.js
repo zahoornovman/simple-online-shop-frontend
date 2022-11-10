@@ -18,7 +18,8 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         await dispach(loginUser({ email, password }));
-        navigate(from, { replace: true });
+        //navigate(from, { replace: true });
+        navigate('/home')
     };
 
     return (

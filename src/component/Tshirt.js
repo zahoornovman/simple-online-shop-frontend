@@ -22,14 +22,14 @@ export  function Tshirt(props){
 
     const handleAddToCart = (event) =>{
 
-        console.log(event);
+        //console.log(event);
         const name= props.tshirt.name;
         const pricePerUnit = props.tshirt.price;
         const quantity = 1; // need to update this when implementation for quantiy is added
         const discount = props.tshirt.discount;
         const finalPrice = pricePerUnit;
         const id = props.tshirt.id;
-        console.log(id, name, pricePerUnit, quantity, discount, finalPrice)
+        //console.log(id, name, pricePerUnit, quantity, discount, finalPrice)
         let action = { id, name, pricePerUnit, quantity, discount, finalPrice }
         dispatch(setToCart(action));
         dispatch(setIncreaseItems());
@@ -46,7 +46,5 @@ export  function Tshirt(props){
             </div>
         </div>
     )
-
-
 
 }

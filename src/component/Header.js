@@ -16,6 +16,8 @@ import { useState } from 'react'
 //modal
 import { ShoppingCartModal } from './modal/shoppingCartModal'
 
+import { RequireAuth } from './RequireAuth';
+
 
 function Header(){
 
@@ -24,7 +26,6 @@ function Header(){
     const [showModal, setShowModal] = useState(false);
 
     function handleClick(){
-        console.log('enteringhandleClick')
         setShowModal(!showModal);
     }
 
@@ -38,7 +39,14 @@ function Header(){
             <div className='shopping-cart'>
                 <div>{items}</div>
                 <img onClick={handleClick} className='shopping-cart-img' src = { Cart }/>
-                {showModal && <ShoppingCartModal handleClick = {handleClick} show = {showModal}/> }
+                {/* <RequireAuth> */}
+                {
+                showModal && 
+                 <RequireAuth>
+                    <ShoppingCartModal handleClick = {handleClick} show = {showModal}/>
+                 </RequireAuth>
+                 }
+                {/* </RequireAuth> */}
             </div>
         </div>
         

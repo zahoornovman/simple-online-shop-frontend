@@ -21,7 +21,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={
-          <RequireAuth> <Home/> </RequireAuth>
+            <Home/> 
         }/>      
         <Route path='/registerNewUser' element= {<RegisterNewUser/>}/>
         <Route path='/registration/validation' element={<RegistrationValidation/>}/>
