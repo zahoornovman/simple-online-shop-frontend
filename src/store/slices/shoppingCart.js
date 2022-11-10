@@ -18,6 +18,17 @@ const shoppingSlice = createSlice({
         increaseTotalValue: (state, action) => {
             console.log(action);
             state.totalValue += action.payload;
+        },
+        removeItem: (state, action) => {
+            console.log(action)
+            state.cartItems = state.cartItems.filter(obj => obj.id !== parseInt(action.payload) );
+        },
+        decreaseTotalValue: (state, action) => {
+            console.log(action)
+            state.totalValue -= action.payload
+        },
+        decreaseItems: state => {
+            state.numberOfItems -= 1;
         }
     }
 });
@@ -25,6 +36,15 @@ const shoppingSlice = createSlice({
 const setToCart = shoppingSlice.actions.addItemToCart;
 const setIncreaseItems = shoppingSlice.actions.increaseItems;
 const setTotalValueUp = shoppingSlice.actions.increaseTotalValue;
+const setRemoveItem = shoppingSlice.actions.removeItem;
+const setDecreaseItem = shoppingSlice.actions.decreaseItems;
+const setDecreaseTotalValue = shoppingSlice.actions.decreaseTotalValue;
 const reducer = shoppingSlice.reducer
 
-export { setToCart, setIncreaseItems, setTotalValueUp, reducer } 
+export { setToCart, 
+    setIncreaseItems,
+    setTotalValueUp, 
+    setRemoveItem,
+    setDecreaseItem,
+    setDecreaseTotalValue, 
+    reducer } 

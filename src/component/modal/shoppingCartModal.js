@@ -2,16 +2,27 @@ import React from "react";
 
 import './styles.css'
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import { selectShoppingCartItems, selectTotalAmount } from '../../store/selectors'
+     
+import { setRemoveItem, setDecreaseItem, setDecreaseTotalValue, } from '../../store/slices/shoppingCart'
 
 
 export function ShoppingCartModal(props) {
 
     const shoppingCart = useSelector(selectShoppingCartItems);
     const totalAmount = useSelector(selectTotalAmount);
+    const dispatch = useDispatch();
     //console.log(shoppingCart);
+
+    const handleRemoveItem = (event) => {
+        console.log(event.target.id)
+        console.log(event.target.getAttribute('priceperunit'))
+        dispatch(setRemoveItem(event.target.id));
+        dispatch(setDecreaseItem());
+        dispatch(setDecreaseTotalValue(event.target.getAttribute('priceperunit')))
+    }
 
     return (
         <div className="shopping-cart-modal" onClick={props.handleClick}>
@@ -30,19 +41,18 @@ export function ShoppingCartModal(props) {
                                 <td>Quantity</td>
                                 <td>Discount</td>
                                 <td>Final Price</td>
-                                {/* <td>Remove Product</td> */}
+                                <td>Remove Product</td>
                             </tr>
                         </thead>
                         <tbody>
                             {shoppingCart.map(item => 
-                                <tr>
-                                    
+                                <tr>                                   
                                     <td>{item.name}</td>
                                     <td>{item.pricePerUnit}</td>
                                     <td>{item.quantity}</td>
                                     <td>{item.discount}</td>
                                     <td>{item.finalPrice}</td>
-                                    {/* <td><button>Remove Item</button></td> */}
+                                    <td><button onClick={handleRemoveItem} id={item.id} priceperunit={item.pricePerUnit} >Remove Item</button></td>
                                 </tr>
                             )}
                         </tbody>

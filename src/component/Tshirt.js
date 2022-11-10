@@ -28,8 +28,9 @@ export  function Tshirt(props){
         const quantity = 1; // need to update this when implementation for quantiy is added
         const discount = props.tshirt.discount;
         const finalPrice = pricePerUnit;
-        console.log(name, pricePerUnit, quantity, discount, finalPrice)
-        let action = { name, pricePerUnit, quantity, discount, finalPrice }
+        const id = props.tshirt.id;
+        console.log(id, name, pricePerUnit, quantity, discount, finalPrice)
+        let action = { id, name, pricePerUnit, quantity, discount, finalPrice }
         dispatch(setToCart(action));
         dispatch(setIncreaseItems());
         dispatch(setTotalValueUp(finalPrice));
