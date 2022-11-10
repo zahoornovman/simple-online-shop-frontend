@@ -36,22 +36,12 @@ function Header(){
     return (
         <div className="header">
             <div className='nameAndLogo'>
-                <img className= 'website-logo' src={ Logo }/>
-                <h4>My Cool Tshirts</h4>
+                <img className= 'website-logo' onClick={() => navigate('/')} src={ Logo }/>
+                <h1 id='website-name'>My Cool Tshirts</h1>
             </div>
             <div className='shopping-cart-info'>
                 <div>{items}</div>
-                {/* <img onClick={handleClick} className='shopping-cart-img' src = { Cart }/> */}
                 <img onClick={()=> navigate('/shoppingCart')} className='shopping-cart-img' src = { Cart }/>
-
-                {/* <RequireAuth> */}
-                {/* {
-                showModal && 
-                 <RequireAuth>
-                    <ShoppingCartModal handleClick = {handleClick} show = {showModal}/>
-                 </RequireAuth>
-                 } */}
-                {/* </RequireAuth> */}
             </div>
         </div>
         

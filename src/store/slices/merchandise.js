@@ -77,6 +77,14 @@ const merchandiseList = createSlice({
                 price: 90,
                 discount: ''
             },
+            {
+                id: 10,    
+                url: 'https://cdn.shopify.com/s/files/1/2959/1448/products/crazy-dog-t-shirts-mens-t-shirts-deez-nuts-men-s-tshirt-31134524538995_1080x.jpg?v=1668093530',
+                name: 'Shirt 10',
+                quantity: 10,
+                price: 100,
+                discount: ''
+            }
         ]
     },
     reducers: {}

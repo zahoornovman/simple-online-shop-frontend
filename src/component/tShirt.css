@@ -4,16 +4,21 @@
 }
 
 .tshirt-img{
-    height: 150px;
-    width: 140px;
+    height: 200px;
+    width: 190px;
 }
 
 .priceAndCart{
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
 .each-tshirt{
     background-color: white;
     margin: 10px;
+    text-shadow: 2px 2px 5px blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }

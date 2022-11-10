@@ -38,7 +38,7 @@ export  function Tshirt(props){
 
     return (
         <div className="each-tshirt">
-            <h6>{props.tshirt.name}</h6>
+            <h4>{props.tshirt.name}</h4>
             <img className = 'tshirt-img'src={props.tshirt.url} alt={props.name}/>
             <div className='priceAndCart'>               
                 <span>Price: {props.tshirt.price} </span>

@@ -12,10 +12,11 @@ export function Home(){
     //console.log(merchandise);
 
     return (
-
-        <div className="tshirt-display">
-        {merchandise.map(
-            (tshirt)=> <Tshirt key={tshirt.id} tshirt={tshirt}/>)}
+        <div className="body">
+            <div className="tshirt-display">
+            {merchandise.map(
+                (tshirt)=> <Tshirt key={tshirt.id} tshirt={tshirt}/>)}
+            </div>
         </div>
     )
 }
