@@ -18,10 +18,13 @@ import { ShoppingCartModal } from './modal/shoppingCartModal'
 
 import { RequireAuth } from './RequireAuth';
 
+import { useNavigate } from "react-router-dom";
+
 
 function Header(){
 
     const items = useSelector(selectNumberOfItems);
+    const navigate = useNavigate();
 
     const [showModal, setShowModal] = useState(false);
 
@@ -36,16 +39,18 @@ function Header(){
                 <img className= 'website-logo' src={ Logo }/>
                 <h4>My Cool Tshirts</h4>
             </div>
-            <div className='shopping-cart'>
+            <div className='shopping-cart-info'>
                 <div>{items}</div>
-                <img onClick={handleClick} className='shopping-cart-img' src = { Cart }/>
+                {/* <img onClick={handleClick} className='shopping-cart-img' src = { Cart }/> */}
+                <img onClick={()=> navigate('/shoppingCart')} className='shopping-cart-img' src = { Cart }/>
+
                 {/* <RequireAuth> */}
-                {
+                {/* {
                 showModal && 
                  <RequireAuth>
                     <ShoppingCartModal handleClick = {handleClick} show = {showModal}/>
                  </RequireAuth>
-                 }
+                 } */}
                 {/* </RequireAuth> */}
             </div>
         </div>

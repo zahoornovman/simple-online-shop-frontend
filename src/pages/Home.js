@@ -4,6 +4,8 @@ import { selectMerchandise } from '../store/selectors'
 
 import { Tshirt } from "../component/Tshirt";
 
+import './home.css'
+
 export function Home(){
 
     const merchandise = useSelector(selectMerchandise);

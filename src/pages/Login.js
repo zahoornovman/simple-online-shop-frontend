@@ -19,7 +19,7 @@ function Login() {
         e.preventDefault();
         await dispach(loginUser({ email, password }));
         //navigate(from, { replace: true });
-        navigate('/home')
+        navigate('/')
     };
 
     return (

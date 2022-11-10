@@ -19,6 +19,15 @@ export function RequireAuth(props) {
 
   //  }
 
+
+
+  // on click => 
+  // if token
+  // => change modal
+  // else 
+  //   => login
+
+  //if (!auth && location.pathname !== '/login')
   if (!auth) { 
     //setShowLoginModal(true);
     
@@ -27,5 +36,14 @@ export function RequireAuth(props) {
     
   }
 
+  // if (!auth && location.pathname !== '/login'){  
+  //   return <Navigate print = {console.log('no auth not on login')}to="/login" state={{ from: location }} replace />
+  // } else if (auth && location.pathname !== '/login'){
+  //   return <Navigate print = {console.log('auth not on login')} to='/shoppingCart'/>
+  // } else if (!auth && location.pathname === '/login' ){
+  //   console.log('no auth on login page')
+  //   return null
+  // }
+  // console.log('no auth not on login page')
   return props.children;
 }

@@ -3,7 +3,7 @@
     max-width: 80px;
 }
 
-.shopping-cart{
+.shopping-cart-info{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -23,7 +23,7 @@
     height: 80px;
     display: flex;
     flex-direction: row;
-    border: 1px black solid;
+    border: 1px rgb(212, 14, 14) solid;
     justify-content: space-between;
     align-items: center;
     background-color: bisque;

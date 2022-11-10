@@ -14,14 +14,18 @@ import { RegistrationSuccess } from './pages/RegistrationSuccess'
 import { NotFound } from './pages/NotFound'
 import { Login } from './pages/Login'
 import { Home } from './pages/Home'
+import { ShoppingCart } from './pages/ShoppingCartPage'
 
 function App() {
   return (
     <div className="app">
       <Header/>
       <Routes>
-        <Route path='/' element={
-            <Home/> 
+        <Route path='/' element={ <Home/> }/>
+        <Route path='/shoppingCart' element={
+           <RequireAuth>
+            <ShoppingCart/> 
+           </RequireAuth>
         }/>      
         <Route path='/registerNewUser' element= {<RegisterNewUser/>}/>
         <Route path='/registration/validation' element={<RegistrationValidation/>}/>
