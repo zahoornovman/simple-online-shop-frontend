@@ -11,10 +11,22 @@ import { selectNumberOfItems } from '../store/selectors'
 //react-redux methods
 import { useSelector } from 'react-redux'
 
+import { useState } from 'react'
+
+//modal
+import { ShoppingCartModal } from './modal/shoppingCartModal'
+
 
 function Header(){
 
     const items = useSelector(selectNumberOfItems);
+
+    const [showModal, setShowModal] = useState(false);
+
+    function handleClick(){
+        console.log('enteringhandleClick')
+        setShowModal(!showModal);
+    }
 
 
     return (
@@ -25,7 +37,8 @@ function Header(){
             </div>
             <div className='shopping-cart'>
                 <div>{items}</div>
-                <img className='shopping-cart-img' src = { Cart }/>
+                <img onClick={handleClick} className='shopping-cart-img' src = { Cart }/>
+                {showModal && <ShoppingCartModal handleClick = {handleClick} show = {showModal}/> }
             </div>
         </div>
         

@@ -3,13 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const shoppingSlice = createSlice({
     name: 'shoppingCart',
     initialState: {
-        cartItems: [{
-            name: '',
-            pricePerUnit: 0,
-            quantity: 0,
-            discount: '',
-            finalPrice: 0
-        }],
+        cartItems: [],
         numberOfItems: 0,
         totalValue: 0
     },
@@ -17,7 +11,6 @@ const shoppingSlice = createSlice({
         addItemToCart:  (state, action) => {
             console.log(action.payload);
             state.cartItems.push(action.payload);
-            // state.numberOfItems += 1;
         } ,
         increaseItems: state => {
             state.numberOfItems +=1;
