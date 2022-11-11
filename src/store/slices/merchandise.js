@@ -10,7 +10,7 @@ const merchandiseList = createSlice({
                 url: 'https://cdn.shopify.com/s/files/1/2959/1448/products/crazy-dog-t-shirts-mens-t-shirts-can-t-work-today-my-arm-is-in-a-cast-men-s-tshirt-28969004204147_280x.jpg?v=1639440966',
                 name: 'Shirt 1',
                 quantity: 1,
-                price: 10,
+                price: 12,
                 discount: ''
             },
             {
@@ -18,7 +18,7 @@ const merchandiseList = createSlice({
                 url: 'https://cdn.shopify.com/s/files/1/2959/1448/products/crazy-dog-t-shirts-youth-t-shirts-ask-me-about-my-ninja-disguise-flip-youth-tshirt-28968375615603_360x.jpg?v=1639426560',
                 name: 'Shirt 2',
                 quantity: 2,
-                price: 20,
+                price: 21,
                 discount: ''
             },
             {

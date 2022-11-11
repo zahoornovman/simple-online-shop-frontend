@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { selectShoppingCartItems, selectTotalAmount } from '../../store/selectors'
      
-import { setRemoveItem, setDecreaseItem, setDecreaseTotalValue, } from '../../store/slices/shoppingCart'
+import { setDecreaseNumberOfItem, setDecreaseTotalValue, setRemoveItemFromCart, } from '../../store/slices/shoppingCart'
 
 
 export function ShoppingCartModal(props) {
@@ -19,8 +19,8 @@ export function ShoppingCartModal(props) {
     const handleRemoveItem = (event) => {
         console.log(event.target.id)
         console.log(event.target.getAttribute('priceperunit'))
-        dispatch(setRemoveItem(event.target.id));
-        dispatch(setDecreaseItem());
+        dispatch(setRemoveItemFromCart(event.target.id));
+        dispatch(setDecreaseNumberOfItem());
         dispatch(setDecreaseTotalValue(event.target.getAttribute('priceperunit')))
     }
 

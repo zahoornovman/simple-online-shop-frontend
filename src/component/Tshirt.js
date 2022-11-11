@@ -8,17 +8,17 @@ import { useDispatch } from 'react-redux';
 
 import { useState } from 'react';
 
-import { setToCart, setIncreaseItems, setTotalValueUp } from '../store/slices/shoppingCart'
+import { setToCart, setIncreaseNumberOfItems, setTotalValueUp } from '../store/slices/shoppingCart'
 
 export  function Tshirt(props){
 
     const dispatch = useDispatch();
 
-    const [name, setName] = useState('');
-    const [pricePerUnit, setPricePerUnit] = useState();
-    const [quantity, setQuantity] = useState(0);
-    const [discount, setDiscount] = useState('');
-    const [finalPrice, setFinalPrice] = useState(0);
+    // const [name, setName] = useState('');
+    // const [pricePerUnit, setPricePerUnit] = useState();
+    // const [quantity, setQuantity] = useState(0);
+    // const [discount, setDiscount] = useState('');
+    // const [finalPrice, setFinalPrice] = useState(0);
 
     const handleAddToCart = (event) =>{
 
@@ -32,7 +32,7 @@ export  function Tshirt(props){
         //console.log(id, name, pricePerUnit, quantity, discount, finalPrice)
         let action = { id, name, pricePerUnit, quantity, discount, finalPrice }
         dispatch(setToCart(action));
-        dispatch(setIncreaseItems());
+        dispatch(setIncreaseNumberOfItems(1));
         dispatch(setTotalValueUp(finalPrice));
     }
 

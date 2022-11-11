@@ -7,8 +7,6 @@ import { newUser } from "../store/slices/registerUser";
 
 function RegisterNewUser() {
 
-
-
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -20,21 +18,15 @@ function RegisterNewUser() {
         navigate("/registration/validation");
     };
 
-
-
-
-
-
-
 return (
     <div className="registration-page">
-        <h4>Please provide an email address to register</h4>
+        <h4>Please provide an email address to register:</h4>
         <form onSubmit={handleSubmit}>
             <input type="text"
                 placeholder="Email"
                 value={email}
                 onChange={e => setEmail(e.currentTarget.value)} />
-            <button type="submit"> Register </button>
+            <button className='registration' type="submit"> Register </button>
         </form>
 
     </div>
