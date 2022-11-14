@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { selectRegisterUser, selectValidationUser } from '../store/selectors'
+import { Button } from "../component/StyleComponents/StyledButton";
+import { StyledForm} from "../component/StyleComponents/StyledForm";
+import { StyledRegistration } from '../component/StyleComponents/StyledRegistration';
+import { selectRegisterUser, selectValidationUser } from '../store/selectors';
 
 import { newUserInfoValidation } from "../store/slices/newUserValidation";
 
@@ -55,57 +58,50 @@ export function RegistrationValidation() {
         }
     }
 
-
     return (
-        <div className="registration-validation">
-            <h3>Enter more details to update user information & activate user: </h3>
-            <form onSubmit={handleOnSubmit}>
-                <label>
-                    Username:
-                    <input type="text" 
-                    placeholder='username'
+        <StyledRegistration>
+            <h2>Enter more details to update user information & activate user: </h2>
+            <StyledForm onSubmit={handleOnSubmit}>
+                <div>
+                <label htmlFor="user-name"> Username : </label>
+                    <input name="user-name" type="text" 
                     value={username}
                     onChange={e => setUsername(e.currentTarget.value)} />
-                </label>
-                <label>
-                    Code:
-                    <input type="text" 
-                    placeholder='code'
+                
+                </div>
+                <div>
+                <label htmlFor ='code'> Code : </label>
+                    <input name='code' type="text"  
                     value={code}
                     onChange={e => setCode(e.currentTarget.value)} />
-                </label>
-                <label>
-                    Password:
-                    <input type="password" 
-                    placeholder='password'
+                </div>
+                <div>
+                <label htmlFor='password'> Password : </label>
+                    <input name='password' type="password"                   
                     value={password}
                     onChange={e => setPassword(e.currentTarget.value)} />
-                </label>
-                <label>
-                    Repeat Password:
-                    <input type="password" 
-                    placeholder='password'
+                </div>
+                <div>
+                <label htmlFor='reset-password'> Repeat Password : </label>           
+                    <input name="reset-password" type="password"                   
                     value={password_repeat}
                     onChange={e => setPasswordRepeat(e.currentTarget.value)} />
-                </label>
-                <label>
-                    First Name:
-                    <input type="text" 
-                    placeholder='First Name'
+                </div>
+                <div>
+                <label htmlFor='first-name'> First Name : </label>
+                    <input name='first-name' type="text"                    
                     value={first_name}
                     onChange={e => setFirstName(e.currentTarget.value)} />
-                </label>
-                <label>
-                    Last Name:
-                    <input type="text" 
-                    placeholder='Last Name'
+                </div>
+                <div>
+                <label htmlFor='last-name'> Last Name : </label>
+                    <input name='last-name' type="text" 
                     value={last_name}
-                    onChange={e => setLastName(e.currentTarget.value)} />
-                </label>
-                <button>Submit</button>
-                
-            </form>
-        </div>
+                    onChange={e => setLastName(e.currentTarget.value)} />   
+                </div>             
+                <Button type="primary">Submit</Button>       
+            </StyledForm>
+        </StyledRegistration>
 
     )
 }

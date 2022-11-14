@@ -14,11 +14,6 @@ export  function Tshirt(props){
 
     const dispatch = useDispatch();
 
-    // const [name, setName] = useState('');
-    // const [pricePerUnit, setPricePerUnit] = useState();
-    // const [quantity, setQuantity] = useState(0);
-    // const [discount, setDiscount] = useState('');
-    // const [finalPrice, setFinalPrice] = useState(0);
 
     const handleAddToCart = (event) =>{
 

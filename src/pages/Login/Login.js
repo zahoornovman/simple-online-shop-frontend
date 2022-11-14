@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from 'react-router-dom'
-import { loginUser } from '../store/slices/loginUser'
+import { loginUser } from '../../store/slices/loginUser'
 import { useDispatch } from 'react-redux'
 
 import './login.css'
+import { StyledForm } from "../../component/StyleComponents/StyledForm";
+import { Button } from "../../component/StyleComponents/StyledButton";
 
 
 function Login() {
@@ -31,7 +33,7 @@ function Login() {
             <div className="login-information">
                 <div className="login-details">
                     <h2>Login</h2>
-                    <form className= 'login-form' onSubmit={handleSubmit}>
+                    <StyledForm className= 'login-form' onSubmit={handleSubmit}>
     
                         <input type='text' 
                         placeholder='Email' 
@@ -43,15 +45,15 @@ function Login() {
                         value={password} 
                         onChange={e => setPassword(e.currentTarget.value)} />
     
-                        <button id="login-button" type="submit">Login</button>
+                        <Button id="login-button" type="primary">Login</Button>
 
-                    </form>
+                    </StyledForm>
                 </div>
                 <div className="newUser-registration">
                     <span>New to the Website? Sign up: </span>
-                    <button onClick={()=> navigate('/registerNewUser')}>
+                    <Button type='secondary'onClick={()=> navigate('/registerNewUser')}>
                         Register to get your T-shirts!
-                    </button>
+                    </Button>
                 </div>
             </div>            
         </div>

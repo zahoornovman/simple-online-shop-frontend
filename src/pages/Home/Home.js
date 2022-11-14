@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux"
-import { selectMerchandise } from '../store/selectors'
+import { selectMerchandise } from '../../store/selectors'
 
-
-import { Tshirt } from "../component/Tshirt";
+//components
+import { Tshirt } from "../../component/Tshirt";
 
 import './home.css'
 
