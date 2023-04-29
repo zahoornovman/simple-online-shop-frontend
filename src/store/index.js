@@ -19,4 +19,4 @@ const store = configureStore({
 });
 
 
-export { store } 
+export { store }

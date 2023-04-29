@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const StyledForm = styled.form`
 display: flex;
 flex-direction: column;
+//align-items: center;
+justify-content: center;
 
 input:hover{
     border: coral solid 3px;
@@ -11,13 +13,13 @@ input:hover{
 
 label{
     display:flex;
-    flex-direction: row;   
+    flex-direction: row;  
     padding-top: 20px;
     width: 500px;
 }
 
 input{
-    flex:50%;
+    // flex:50%;
     width: 300px;
     padding: 10px 0px;
     border-radius: 5px;

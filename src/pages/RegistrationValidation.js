@@ -60,8 +60,8 @@ export function RegistrationValidation() {
 
     return (
         <StyledRegistration>
-            <h2>Enter more details to update user information & activate user: </h2>
             <StyledForm onSubmit={handleOnSubmit}>
+            <h2>Enter more details to update user information & activate user: </h2>
                 <div>
                 <label htmlFor="user-name"> Username : </label>
                     <input name="user-name" type="text" 

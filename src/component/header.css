@@ -35,6 +35,6 @@
 
 .nameAndLogo{
     display: flex;
-    border: 1pk magenta solid;
+    /* border: 1pk magenta solid; */
     justify-content: space-around;
 }
